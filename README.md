@@ -64,3 +64,19 @@ http://localhost:8080/aria/patient/actuator/metrics/http.server.requests
 ```
 ---
 
+### **Automatic Schema and Sample Data Creation**
+
+To simplify testing and setup, this project uses **CommandLineRunner** to prepopulate the database with 10 patient records during the first run.
+
+- **Automatic Schema and Table Creation**: On initial startup, the schema and table will be created automatically.
+- **Test Data**: 10 sample patient records are inserted into the database.
+
+This allows you to quickly test functionalities such as:  
+- Pagination  
+- Searching  
+- Sorting  
+
+**No additional configuration is needed.** The records are created automatically, ensuring a smooth testing experience.
+
+---
+
