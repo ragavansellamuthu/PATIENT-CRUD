@@ -48,7 +48,7 @@ This project uses the following technologies:
 - **MySQL**: 8.0.40
 ---
 
-### **Swagger , Api-Docs & Actuator Links**
+### **Swagger & Actuator Links**
 
 ```
 http://localhost:8080/aria/swagger-ui
