@@ -40,7 +40,7 @@ public class PatientController {
 	private final PatientService patientService;
 
 	@PostMapping
-	public ResponseEntity<?> addPatient(@Validated(ValidCreation.class) @RequestBody PatientModel model,
+	public ResponseEntity<?> addPatient(@RequestBody PatientModel model,
 			BindingResult result) {
 		if (result.hasErrors()) {
 			return CommonUtils.badRequest(result);
@@ -54,7 +54,7 @@ public class PatientController {
 	}
 
 	@PutMapping
-	public ResponseEntity<?> updatePatient(@Validated(ValidUpdation.class) @RequestBody PatientModel model,
+	public ResponseEntity<?> updatePatient(@RequestBody PatientModel model,
 			BindingResult result) {
 		if (result.hasErrors()) {
 			return CommonUtils.badRequest(result);
