@@ -85,11 +85,11 @@ public class PatientServiceImpl implements PatientService {
 
 	@Override
 	public Page<PatientModel> paginatePatients(int pageIndex, int pageSize, String attributeName, String sortOrder,
-			String searchText) {
+			String patientName) {
 		Pageable pageable = PageRequest.of(pageIndex, pageSize, CommonUtils.sort("patientId",attributeName, sortOrder));
 		Page<PatientEntity> entityPage = null;
-		if (StringUtils.hasText(searchText)) {
-			entityPage = patientRepository.findAllByPatientNameContainingIgnoreCaseAndIsDeletedFalse(searchText, pageable);
+		if (StringUtils.hasText(patientName)) {
+			entityPage = patientRepository.findAllByPatientNameContainingIgnoreCaseAndIsDeletedFalse(patientName, pageable);
 		} else {
 			entityPage = patientRepository.findAllByIsDeletedFalse(pageable);
 		}

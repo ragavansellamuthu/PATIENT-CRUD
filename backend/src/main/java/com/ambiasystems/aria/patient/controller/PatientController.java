@@ -79,10 +79,10 @@ public class PatientController {
 
 	@GetMapping("/page")
 	public ResponseEntity<Page<PatientModel>> paginatePatients(@RequestParam(required = true) int pageIndex,
-			@RequestParam(required = true) int pageSize, @RequestParam(required = false) String attributeName,
-			@RequestParam(required = false) String sortOrder, @RequestParam(required = false) String searchText) {
+			@Positive @RequestParam(required = true) int pageSize, @RequestParam(required = false) String attributeName,
+			@RequestParam(required = false) String sortOrder, @RequestParam(required = false) String patientName) {
 		return ResponseEntity
-				.ok(patientService.paginatePatients(pageIndex, pageSize, attributeName, sortOrder, searchText));
+				.ok(patientService.paginatePatients(pageIndex, pageSize, attributeName, sortOrder, patientName));
 	}
 
 	@GetMapping("check-duplicate-email/{email}")

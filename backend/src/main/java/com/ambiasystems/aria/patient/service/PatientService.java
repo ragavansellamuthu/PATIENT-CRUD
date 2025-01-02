@@ -18,7 +18,7 @@ public interface PatientService {
 	
 	void deletePatient (long candidateId);
 	
-	Page<PatientModel> paginatePatients (int pageIndex , int pageSize , String attributeName , String sortOrder , String searchText);
+	Page<PatientModel> paginatePatients (int pageIndex , int pageSize , String attributeName , String sortOrder , String patientName);
 
 	List<PatientModel> listAllPatients();
 
