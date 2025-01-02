@@ -21,7 +21,7 @@ public interface PatientRepository extends JpaRepository<PatientEntity, Long> {
 	
 	Page<PatientEntity> findAllByIsDeletedFalse(Pageable pagebale);
 	
-	Page<PatientEntity> findAllByPatientNameContainingIgnoreCaseAndIsDeletedFalse(String name,Pageable pagebale);
+	Page<PatientEntity> findAllByPatientNameContainingIgnoreCaseAndIsDeletedFalse(String patientName,Pageable pagebale);
 
 	PatientEntity findAllByEmailAndIsDeletedFalse(String email);
 	
