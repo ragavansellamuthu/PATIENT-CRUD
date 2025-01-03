@@ -18,17 +18,14 @@ import com.ambiasystems.aria.patient.repository.PatientRepository;
 import com.ambiasystems.aria.patient.util.CommonUtils;
 
 import jakarta.persistence.EntityNotFoundException;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
 public class PatientServiceImpl implements PatientService {
 
-	@NonNull
 	private final PatientRepository patientRepository ;
 	
-	@NonNull
 	private final ModelMapper modelMapper;
 	
 	private PatientModel convert(PatientEntity entity) {

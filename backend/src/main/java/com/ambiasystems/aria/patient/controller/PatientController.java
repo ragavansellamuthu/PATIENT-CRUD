@@ -27,7 +27,6 @@ import com.ambiasystems.aria.patient.util.CommonUtils;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Positive;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 @CrossOrigin(origins = "*")
@@ -36,7 +35,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PatientController {
 
-	@NonNull
 	private final PatientService patientService;
 
 	@PostMapping
